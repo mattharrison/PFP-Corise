@@ -11,5 +11,7 @@ RUN python3 -m venv $VENV
 RUN ls .
 
 COPY requirements.txt .
-RUN . $VENV/bin/activate && pip install --upgrade pip
+RUN . $VENV/bin/activate && pip install --upgrade pip==22.2.2
 RUN . $VENV/bin/activate && pip install -r requirements.txt
+
+CMD . $VENV/bin/activate 
