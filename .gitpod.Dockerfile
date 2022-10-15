@@ -2,5 +2,6 @@ FROM gitpod/workspace-full:latest
 
 USER gitpod
 
+COPY requirements.txt .
 RUN pip3 install -U pip
-RUN pip3 install flask==2.1.3 pytest==7.1.1
+RUN pip3 install -r requirements.txt
