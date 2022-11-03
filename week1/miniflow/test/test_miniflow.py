@@ -47,7 +47,7 @@ def test_node_parents():
     node1.add_child(node11)
     node1.add_child(node12)
     node11.add_child(node21)
-    ordered = list(node21.parents())
+    ordered = list(node21.get_parents())
     assert ordered == [node21, node11, node1]
 
 ## Runner
